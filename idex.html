@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6c4df6">
+  <title>Joyal Prince | Personal Website</title>
+  <style>
+    :root { --ink:#202044; --muted:#666782; --purple:#6c4df6; --pink:#ff6fae; --cyan:#5bd8e8; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Arial,Helvetica,sans-serif; color:var(--ink); background:#f8f7ff; }
+    header { padding:18px 7%; display:flex; justify-content:space-between; align-items:center; gap:16px; background:#fff; position:sticky; top:0; z-index:5; box-shadow:0 3px 18px #29205a12; }
+    .brand { font-weight:900; color:var(--purple); font-size:1.15rem; }
+    nav { display:flex; flex-wrap:wrap; gap:18px; }
+    nav a { color:var(--ink); text-decoration:none; font-weight:700; font-size:.92rem; }
+    nav a:hover { color:var(--pink); }
+    .hero { padding:76px 7% 84px; background:linear-gradient(120deg,#eeeaff,#ffe9f3 55%,#e2fbff); display:grid; grid-template-columns:1.3fr .7fr; align-items:center; gap:32px; }
+    .eyebrow { color:#7255e9; text-transform:uppercase; letter-spacing:2px; font-size:.78rem; font-weight:800; }
+    h1 { font-size:clamp(2.7rem,7vw,5.2rem); line-height:1.02; margin:14px 0; letter-spacing:-2px; }
+    h1 span { color:var(--purple); }
+    .hero p { max-width:570px; color:var(--muted); font-size:1.1rem; line-height:1.7; }
+    .btn { display:inline-block; margin-top:16px; padding:14px 22px; border-radius:30px; background:var(--purple); color:white; text-decoration:none; font-weight:800; box-shadow:0 8px 20px #6c4df644; }
+    .profile { width:min(270px,75vw); aspect-ratio:1; border-radius:36% 64% 56% 44% / 42% 40% 60% 58%; background:linear-gradient(145deg,var(--purple),var(--pink),var(--cyan)); display:grid; place-items:center; margin:auto; transform:rotate(4deg); box-shadow:0 22px 50px #7255e933; }
+    .profile span { transform:rotate(-4deg); font-size:5.5rem; color:white; font-weight:900; }
+    section { padding:68px 7%; }
+    .section-title { font-size:2rem; margin:0 0 12px; }
+    .sub { color:var(--muted); line-height:1.7; margin:0 0 28px; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .card { padding:25px; border-radius:22px; background:white; box-shadow:0 8px 28px #29205a0d; border:1px solid #eeecff; }
+    .card .emoji { font-size:2rem; }
+    .card h3 { margin:14px 0 8px; }
+    .card p { color:var(--muted); line-height:1.6; margin:0; }
+    .skills { display:flex; flex-wrap:wrap; gap:12px; }
+    .skill { padding:12px 17px; border-radius:30px; background:#eeeaff; color:#5840cb; font-weight:800; }
+    .skill:nth-child(2n) { background:#ffe8f2; color:#c23e7d; }
+    .skill:nth-child(3n) { background:#e2faff; color:#167e91; }
+    .contact { background:linear-gradient(120deg,#292052,#5140a7); color:white; border-radius:28px; padding:36px; }
+    .contact p { color:#e5e0ff; line-height:1.7; }
+    .contact a { color:#fff; font-weight:800; }
+    footer { text-align:center; padding:24px; color:var(--muted); font-size:.9rem; }
+    @media(max-width:720px) {
+      header { align-items:flex-start; flex-direction:column; }
+      nav { gap:12px; }
+      .hero { grid-template-columns:1fr; text-align:center; padding-top:55px; }
+      .hero p { margin-left:auto; margin-right:auto; }
+      .cards { grid-template-columns:1fr; }
+      section { padding:52px 7%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">✦ JOYAL PRINCE</div>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <div class="eyebrow">Welcome to my website</div>
+        <h1>Hi, I'm <span>Joyal Prince</span>!</h1>
+        <p>I'm a student who enjoys learning technology, creating things, and exploring new ideas. This is my little corner on the internet.</p>
+        <a class="btn" href="#about">Explore my website ↓</a>
+      </div>
+      <div class="profile" aria-label="Decorative profile placeholder"><span>JP</span></div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Me 👋</h2>
+      <p class="sub">Hello! I'm Joyal Prince. I'm interested in computers, website design, photo editing, and creative projects. I'm always learning something new and improving my skills.</p>
+    </section>
+
+    <section id="skills" style="background:#fff">
+      <h2 class="section-title">My Skills ✨</h2>
+      <p class="sub">Things I'm learning and enjoy doing.</p>
+      <div class="skills">
+        <span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">Photo Editing</span><span class="skill">Creative Ideas</span><span class="skill">Learning Technology</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">My Projects 🚀</h2>
+      <p class="sub">A few areas where I want to create and showcase my work.</p>
+      <div class="cards">
+        <article class="card"><div class="emoji">💻</div><h3>Website Design</h3><p>Simple and colourful web pages made while learning HTML and CSS.</p></article>
+        <article class="card"><div class="emoji">📸</div><h3>Photo Editing</h3><p>Creative photo edits, portraits, and visual designs.</p></article>
+        <article class="card"><div class="emoji">🎬</div><h3>Creative Films</h3><p>Ideas, stories, and short-film projects made with friends.</p></article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact">
+        <h2 class="section-title">Contact Me 📩</h2>
+        <p>Want to connect or talk about a project? Add your email or social-media link here before publishing.</p>
+        <p><strong>Email:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a> <small>(replace with your email)</small></p>
+      </div>
+    </section>
+  </main>
+  <footer>Made with 💜 by Joyal Prince · 2026</footer>
+</body>
+</html>
